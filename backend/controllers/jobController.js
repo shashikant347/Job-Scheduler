@@ -1,4 +1,4 @@
-const db = require("../db/db");
+const db = require("../db/db.js");
 const triggerWebhook = require("../utils/webhook");
 
 // ================= CREATE JOB =================
