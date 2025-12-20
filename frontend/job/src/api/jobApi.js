@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://job-scheduler-g443.onrender.com";
+const BASE_URL = "https://job-scheduler-g443.onrender.com/api/jobs";
 
 export const createJob = async (job) => {
   const res = await axios.post(BASE_URL, job);
