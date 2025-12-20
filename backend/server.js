@@ -8,10 +8,8 @@ const jobRoutes = require("./routes/jobRoutes");
 const app = express();
 
 app.use(cors({
-  origin: [
-    "http://localhost:5173",       
-    "http://localhost:3000",       
-    "https://your-frontend-url.com" 
+  origin: [      
+    "https://job-scheduler-2.onrender.com" 
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
