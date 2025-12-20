@@ -15,9 +15,6 @@ const db = require("./db/db");
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  db.getConnection((err) => {
-    if (err) console.error("❌ DB connection failed:", err.message);
-    else console.log("✅ DB connected successfully");
   });
   console.log(`Server running on port ${PORT}`);
 });
