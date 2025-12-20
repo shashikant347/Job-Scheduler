@@ -19,7 +19,7 @@ const JobForm = ({ onJobCreated }) => {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/jobs", {
+      const res = await axios.post("https://job-scheduler-g443.onrender.com/api/jobs", {
         taskName,
         priority,
         payload: parsedPayload
