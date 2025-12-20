@@ -18,7 +18,7 @@ const JobTable = ({ jobs, onRunJob }) => {
         </thead>
         <tbody>
           {jobs.map((job) => (
-            <tr key={job.id} className="hover:bg-gray-50 transition">
+            <tr key={job.id || `${job.taskName}-${Math.random()}`} className="hover:bg-gray-50 transition">
               <td className="p-3 border-b">{job.id}</td>
               <td className="p-3 border-b">{job.taskName}</td>
               <td className={`p-3 border-b font-semibold ${
