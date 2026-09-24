@@ -12,8 +12,7 @@ const JobTable = ({ jobs, onRunJob }) => {
             <th className="p-3 text-left border-b">ID</th>
             <th className="p-3 text-left border-b">Task Name</th>
             <th className="p-3 text-left border-b">Priority</th>
-            <th className="p-3 text-left border-b">Status</th>
-            <th className="p-3 text-center border-b">Actions</th>
+            
           </tr>
         </thead>
         <tbody>
@@ -58,10 +57,7 @@ const JobTable = ({ jobs, onRunJob }) => {
         </tbody>
       </table>
 
-      {selectedJob && (
-        <JobDetail job={selectedJob} onClose={() => setSelectedJob(null)} />
-      )}
-    </div>
+     
   );
 };
 
