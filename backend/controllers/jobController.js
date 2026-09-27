@@ -55,21 +55,5 @@ exports.runJob = (req, res) => {
     WHERE id = ?
   `;
 
-  db.query(selectSql, [id], async (err, results) => {
-    if (err) return res.status(500).json(err);
-    if (results.length === 0) return res.status(404).json({ message: "Job not found" });
-
-    const job = results[0];
-
-    db.query("UPDATE jobs SET status = 'completed' WHERE id = ?", [id], async (err) => {
-      if (err) return res.status(500).json(err);
-
-      await triggerWebhook(job);
-
-      res.json({
-        message: "Job executed successfully",
-        job
-      });
-    });
   });
 };
