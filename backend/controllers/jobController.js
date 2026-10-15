@@ -18,11 +18,5 @@ exports.createJob = (req, res) => {
   );
 };
 
-// ================= GET ALL JOBS =================
-exports.getJobs = (req, res) => {
-  const sql = `
-    SELECT id, taskName, payload, priority, status, createdAt
-    FROM jobs
-    ORDER BY createdAt DESC
-  `;
+
   
